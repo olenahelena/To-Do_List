@@ -1,0 +1,33 @@
+@import "reset";
+@import "variables";
+
+/* ------------------------ */
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    background-color: $grayish;
+    color: $black;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+}
+
+.page {
+    flex: 1 1 auto;
+}
+
+// [class*="__container"] {
+//     max-width: 21.25rem;
+//     padding-left: 0.9375rem;
+//     padding-right: 0.9375rem;
+//     margin: 0 auto;
+// }
+
+/* ------------------------ */
