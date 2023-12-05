@@ -86,4 +86,10 @@ body {
   flex: 1 1 auto;
 }
 
+[class*=__container] {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  margin: 0 auto;
+}
+
 /* ------------------------ *//*# sourceMappingURL=style.css.map */
