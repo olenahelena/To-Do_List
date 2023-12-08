@@ -9,9 +9,37 @@
 </head>
 
 <body>
+    <header>
+        <h1>My Todo List</h1>
+    </header>
     <div class="wrapper">
         <main class="page">
-            <div class="main-page__container"></div>
+            <div class="main-page__container">
+                <form action="">
+                    <input type="text" class="todo-input">
+                    <button class="todo-button" type="submit">
+                        <i class="fas fa-plus-square"></i>
+                    </button>
+                    <div class="select">
+                        <select name="todos" class="filter-todo">
+                            <option value="all">All</option>
+                            <option value="completed">Completed</option>
+                            <option value="uncompleted">Uncompleted</option>
+                        </select>
+                    </div>
+                </form>
+
+                <div class="todo-container">
+                    <ul class="todo-list">
+                        <!-- <div class="todo-list__container">
+                                <li></li>
+                                <button>Checked</button>
+                                <button>Delete</button>
+                            </div> -->
+                    </ul>
+                </div>
+            </div>
+
         </main>
 
 
