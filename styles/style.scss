@@ -1,14 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@500&family=Montserrat:wght@600;700&display=swap');
+
 @import "reset";
 @import "variables";
 
 /* ------------------------ */
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Hind', sans-serif;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
-    background-color: $grayish;
+    background-color: $light-purple;
     color: $black;
 }
 
@@ -24,7 +26,7 @@ body {
 }
 
 [class*="__container"] {
-    // max-width: 21.25rem;
+    // max-width: 340px;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
     margin: 0 auto;
@@ -32,4 +34,15 @@ body {
 
 /* ------------------------ */
 
-// new styles
+h1 {
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: $purple;
+    margin-bottom: 1.25rem;
+}
+
+.main-page__form {
+    background-color: $white;
+    border-radius: 1.25rem;
+}

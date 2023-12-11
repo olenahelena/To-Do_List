@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@500&family=Montserrat:wght@600;700&display=swap");
 /* reset */
 *,
 *::before,
@@ -63,15 +64,13 @@ span {
   line-height: inherit;
 }
 
-/* Primary colors */
-/* Neutral colors */
 /* ------------------------ */
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Hind", sans-serif;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
-  background-color: hsl(206, 20%, 93%);
+  background-color: hsl(227, 100%, 95%);
   color: hsl(0, 0%, 0%);
 }
 
@@ -92,4 +91,16 @@ body {
   margin: 0 auto;
 }
 
-/* ------------------------ *//*# sourceMappingURL=style.css.map */
+/* ------------------------ */
+h1 {
+  font-size: 3rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: hsl(250, 100%, 70%);
+  margin-bottom: 1.25rem;
+}
+
+.main-page__form {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1.25rem;
+}/*# sourceMappingURL=style.css.map */
