@@ -102,51 +102,102 @@ body {
 }
 
 /* ------------------------ */
+.main-page__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  background-color: hsl(250, 100%, 70%);
+  border-radius: 1.25rem;
+  margin: 3rem 0 1.25rem;
+  padding: 1rem 1rem 1.125rem;
+}
+
 h1 {
-  font-size: 2.625rem;
+  font-size: 2.25rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  color: hsl(250, 100%, 70%);
-  margin: 3rem 0 1.25rem;
+  color: hsl(0, 0%, 100%);
   line-height: normal;
   text-align: center;
 }
 
+.fa-bars {
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+
+/* ------------------------ */
 .main-page__form {
   background-color: hsl(0, 0%, 100%);
-  border-radius: 1.25rem;
+  border-radius: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1.125rem;
+}
+
+.todo-input {
+  position: relative;
 }
 
 form input,
 form button {
-  padding: 0.5rem;
+  padding: 0.8rem;
   font-size: 1rem;
   border: none;
   background: hsl(0, 0%, 100%);
-  border-radius: 10px;
-}
-
-.todo-button {
-  width: 40px;
 }
 
 form input:focus-visible {
-  outline-color: hsl(250, 100%, 83%);
+  outline-color: hsla(250, 100%, 83%, 0.2);
 }
 
-form button {
-  color: hsl(250, 100%, 83%);
-  background: hsl(0, 0%, 100%);
+.todo-button {
+  position: absolute;
+  right: 29px;
+  color: hsl(0, 0%, 100%);
+  background: hsl(250, 100%, 70%);
+  border-radius: 1rem;
   cursor: pointer;
+  width: 80px;
   transition: all 0.3s ease;
 }
 
 form button:hover {
   color: hsl(0, 0%, 100%);
   background: hsl(250, 100%, 83%);
+}
+
+/*-------------------------*/
+.main-page__list {
+  position: relative;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1.25rem;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px 10px;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  line-height: normal;
+  color: hsl(0, 0%, 0%);
+  margin-top: 50px;
+  text-align: center;
+}
+
+.main-page__image {
+  position: absolute;
+  top: 25%;
+}
+
+.main_img {
+  width: 14.0625rem;
+  height: 10.5rem;
 }
 
 /*-------------------------*/
@@ -164,7 +215,7 @@ form button:hover {
 .todo-list__container {
   margin: 0.5rem;
   background: #fff;
-  color: #000;
+  color: hsl(0, 0%, 0%);
   font-size: 1.5rem;
   display: flex;
   justify-content: space-between;
@@ -178,7 +229,7 @@ form button:hover {
 
 .delete-btn,
 .complete-btn {
-  background: #ff6f47;
+  background: hsl(31, 100%, 72%);
   color: #fff;
   border: none;
   padding: 1rem;
@@ -187,7 +238,7 @@ form button:hover {
 }
 
 .complete-btn {
-  background: rgb(67, 105, 67);
+  background: rgb(101, 182, 133);
 }
 
 .todo-item {
