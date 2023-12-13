@@ -26,7 +26,7 @@ body {
 }
 
 [class*="__container"] {
-    max-width: 340px;
+    max-width: 360px;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
     margin: 0 auto;
@@ -97,12 +97,12 @@ form input:focus-visible {
 
 .todo-button {
     position: absolute;
-    right: 29px;
+    right: 1.8125rem;
     color: $white;
     background: $purple;
     border-radius: 1rem;
     cursor: pointer;
-    width: 80px;
+    width: 5rem;
     transition: all 0.3s ease;
 }
 
@@ -114,7 +114,6 @@ form button:hover {
 /*-------------------------*/
 
 .main-page__list {
-    position: relative;
     background-color: $white;
     border-radius: 1.25rem;
     min-height: 50vh;
@@ -124,23 +123,34 @@ form button:hover {
     padding: 0 20px 10px;
 }
 
+.list__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     line-height: normal;
     color: $black;
-    margin-top: 50px;
+    margin-top: 3.125rem;
     text-align: center;
 }
 
 .main-page__image {
-    position: absolute;
-    top: 25%;
+    margin-top: 3.75rem;
 }
 
 .main_img {
     width: 14.0625rem;
     height: 10.5rem;
+}
+
+/*-------------------------*/
+
+.delete_item {
+    display: none;
 }
 
 /*-------------------------*/
@@ -160,7 +170,7 @@ h2 {
     margin: 0.5rem;
     background: #fff;
     color: $black;
-    font-size: 1.5rem;
+    font-size: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -169,6 +179,7 @@ h2 {
 
 .todo-list li {
     flex: 1;
+    padding-right: 20px;
 }
 
 .delete-btn,
@@ -179,6 +190,7 @@ h2 {
     padding: 1rem;
     cursor: pointer;
     font-size: 1rem;
+    border-radius: 10px;
 }
 
 .complete-btn {

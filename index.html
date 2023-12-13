@@ -24,13 +24,6 @@
                 <div class="main-page__content">
                     <h1>To-do List</h1>
                     <i class="fa-solid fa-bars fa-lg"></i>
-                </div>
-
-                <form class="main-page__form" action="">
-                    <input type="text" class="todo-input">
-                    <button class="todo-button" type="submit">
-                        <i class="fa-solid fa-plus"></i>
-                    </button>
                     <!-- <div class="select">
                         <select name="todos" class="filter-todo">
                             <option value="all">All</option>
@@ -38,15 +31,25 @@
                             <option value="uncompleted">Uncompleted</option>
                         </select>
                     </div> -->
+                </div>
+
+                <form class="main-page__form" action="">
+                    <input type="text" class="todo-input">
+                    <button class="todo-button" type="submit">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
                 </form>
 
                 <div class="main-page__list">
-                    <div class="list__text">
-                        <h2>Seems you didn't add nothing yet</h2>
+                    <div class="list__content">
+                        <div class="list__text">
+                            <h2>Seems you didn't add nothing yet</h2>
+                        </div>
+                        <div class="main-page__image">
+                            <img src="/assets/images/main_img.png" alt="Main Image" class="main_img">
+                        </div>
                     </div>
-                    <div class="main-page__image">
-                        <img src="/assets/images/main_img.png" alt="Main Image" class="main_img">
-                    </div>
+                    <div class="list__items"></div>
                 </div>
 
 

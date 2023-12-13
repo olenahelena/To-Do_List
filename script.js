@@ -1,21 +1,20 @@
 "use strict"
 
-// selectors 
 const todoInput = document.querySelector('.todo-input');
 const todoButton = document.querySelector('.todo-button');
 const todoList = document.querySelector('.todo-list');
 const filterOption = document.querySelector(".filter-todo");
+// const mainImg = document.querySelector(".main_img");
+const noInputMessage = document.querySelector(".list__content");
 
-// events listeners
+
 document.addEventListener('DOMContentLoaded', getTodos);
 todoButton.addEventListener('click', addTodo);
-todoList.addEventListener('click', deleteCheck);
-filterOption.addEventListener('click', filterTodo); 
-
-// functions
 
 function addTodo(event) {
     event.preventDefault();
+// delete main image and message
+noInputMessage.classList.add('delete_item');
 // create div
     const todoDiv = document.createElement('div');
     todoDiv.classList.add('todo-list__container');
@@ -50,6 +49,7 @@ function addTodo(event) {
     todoInput.value = "";
 }
 
+todoList.addEventListener('click', deleteCheck);
 function deleteCheck(e) {
     const item = e.target;
     // delete todo item
@@ -69,6 +69,7 @@ function deleteCheck(e) {
     }
 }
 
+filterOption.addEventListener('click', filterTodo); 
 function filterTodo(e) {
   const todos = todoList.childNodes;
   todos.forEach(function (todo) {
