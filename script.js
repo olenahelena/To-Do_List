@@ -14,7 +14,7 @@ todoButton.addEventListener('click', addTodo);
 function addTodo(event) {
     event.preventDefault();
 // delete main image and message
-noInputMessage.classList.add('delete_item');
+noInputMessage.style.visibility = 'hidden';
 // create div
     const todoDiv = document.createElement('div');
     todoDiv.classList.add('todo-list__container');
