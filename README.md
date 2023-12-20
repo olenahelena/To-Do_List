@@ -1,6 +1,6 @@
 # To-Do List Application
 
-The To-Do List Application is a web-based task management tool that allows users to create, organize, and manage their daily tasks efficiently. The application provides a user-friendly interface where tasks can be added, marked as complete, edited, and removed. 
+The To-Do List Application is a web-based task management tool that allows users to create, organize, and manage their daily tasks efficiently. The application provides a user-friendly interface where tasks can be added, marked as complete, edited, and removed. git
 
 ## Table of contents
 

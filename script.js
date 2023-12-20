@@ -3,13 +3,13 @@
 const todoInput = document.querySelector('.todo-input');
 const todoButton = document.querySelector('.todo-button');
 const todoList = document.querySelector('.todo-list');
-const filterOption = document.querySelector(".filter-todo");
-// const mainImg = document.querySelector(".main_img");
-const noInputMessage = document.querySelector(".list__content");
-
+const filterOption = document.querySelector('.filter-todo');
+const noInputMessage = document.querySelector('.list__content');
 
 document.addEventListener('DOMContentLoaded', getTodos);
 todoButton.addEventListener('click', addTodo);
+document.addEventListener('click', documentActions);
+
 
 function addTodo(event) {
     event.preventDefault();
@@ -98,6 +98,29 @@ function filterTodo(e) {
   });
 }
 
+function documentActions(e) {
+   const targetElement = e.target;
+
+   if (targetElement.closest('.icon-menu')) {
+       document.documentElement.classList.toggle('menu-open');
+   }
+
+  //  if (targetElement.closest('[data-goto]')) {
+  //      document.documentElement.classList.remove('menu-open');
+
+  //      const goTo = targetElement.closest('[data-goto]').dataset.goto;
+  //      const goToElement = document.querySelector(goTo);
+  //      const headerHeight = document.querySelector('.header').offsetHeight;
+
+  //      if (goToElement) {
+  //          window.scrollTo({
+  //              top: goToElement.offsetTop - headerHeight,
+  //              behavior: "smooth"
+  //          });
+  //          e.preventDefault();
+  //      }
+  //  }
+}
 
 function saveLocalTodos(todo) {
     // check - do I already have things in there?
@@ -131,7 +154,7 @@ function getTodos() {
 
     // check mark button
     const completeButton = document.createElement('button');
-    completeButton.innerHTML = '<i class = "fas fa-check"></i>';
+    completeButton.innerHTML = '<i class = "fa fa-check"></i>';
     completeButton.classList.add("complete-btn");
      todoDiv.appendChild(completeButton);
 

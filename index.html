@@ -20,10 +20,27 @@
         <main class="page main-page">
             <div class="main-page__container">
 
-
                 <div class="main-page__content">
                     <h1>To-do List</h1>
-                    <i class="fa-solid fa-bars fa-lg"></i>
+                    <nav class="header__menu menu">
+                        <div class="menu__body">
+                            <ul class="menu__list">
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">All</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">Completed</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">Uncompleted</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="menu__icon icon-menu" type="button">
+                            <span class="icon-menu__line"></span>
+                        </button>
+                    </nav>
+                    <!-- <i class="fa-solid fa-bars fa-lg icon-menu"></i> -->
                     <!-- <div class="select">
                         <select name="todos" class="filter-todo">
                             <option value="all">All</option>
@@ -55,18 +72,11 @@
 
                 <div class="todo-container">
                     <ul class="todo-list">
-                        <!-- <div class="todo-list__container">
-                                <li></li>
-                                <button>Checked</button>
-                                <button>Delete</button>
-                            </div> -->
                     </ul>
                 </div>
             </div>
 
         </main>
-
-
 
     </div>
     <script src="script.js"></script>

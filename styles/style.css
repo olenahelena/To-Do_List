@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Hind:wght@500&family=Montserrat:wght@600;700&display=swap");
 /* reset */
 *,
@@ -132,13 +131,13 @@ h1 {
   background-color: hsl(0, 0%, 100%);
   border-radius: 1rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 1.125rem;
 }
 
-.todo-input {
-  position: relative;
+form input {
+  border-radius: 1rem;
 }
 
 form input,
@@ -154,11 +153,9 @@ form input:focus-visible {
 }
 
 .todo-button {
-  position: absolute;
-  right: 1.8125rem;
   color: hsl(0, 0%, 100%);
   background: hsl(250, 100%, 70%);
-  border-radius: 1rem;
+  border-radius: 0 1rem 1rem 0;
   cursor: pointer;
   width: 5rem;
   transition: all 0.3s ease;
@@ -177,7 +174,7 @@ form button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 20px 10px;
+  padding: 0 1.25rem 0.625rem;
 }
 
 .list__content {
@@ -206,7 +203,7 @@ h2 {
 
 /*-------------------------*/
 .delete_item {
-  display: none;
+  visibility: visible;
 }
 
 /*-------------------------*/
@@ -226,6 +223,7 @@ h2 {
   background: #fff;
   color: hsl(0, 0%, 0%);
   font-size: 1rem;
+  border-radius: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -234,7 +232,7 @@ h2 {
 
 .todo-list li {
   flex: 1;
-  padding-right: 20px;
+  padding-right: 1.25rem;
 }
 
 .delete-btn,
@@ -245,7 +243,7 @@ h2 {
   padding: 1rem;
   cursor: pointer;
   font-size: 1rem;
-  border-radius: 10px;
+  border-radius: 0.625rem;
 }
 
 .complete-btn {
@@ -279,31 +277,87 @@ select {
   border: none;
 }
 
-.select {
-  margin: 1rem;
-  position: relative;
+.menu__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.menu__link {
+  font-size: 18px;
+}
+
+.menu__link:hover {
+  text-decoration: underline;
+}
+
+.menu-open body {
   overflow: hidden;
 }
 
-select {
-  color: #ff6f47;
-  width: 10rem;
-  cursor: pointer;
-  padding: 1rem;
+.menu__body {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(250, 100%, 83%);
+  padding: 100px 15px 20px 15px;
+  transition: left 0.3s;
+  overflow: auto;
+  z-index: 1;
 }
 
-.select::after {
-  content: "▼";
+.menu-open .menu__body {
+  left: 0;
+}
+
+.icon-menu {
+  display: block;
+  position: relative;
+  z-index: 5;
+  width: 30px;
+  height: 18px;
+}
+
+/* Burger menu */
+.icon-menu__line,
+.icon-menu::before,
+.icon-menu::after {
+  content: "";
   position: absolute;
-  background: #ff6f47;
-  top: 0;
-  right: 0;
-  padding: 1rem;
-  pointer-events: none;
+  background-color: hsl(0, 0%, 100%);
+  width: 100%;
+  height: 0.125rem;
+  left: 0;
   transition: all 0.3s ease;
 }
 
-.select:hover::after {
-  background: white;
-  color: #ff6f47;
+.icon-menu::before {
+  top: 0;
+}
+
+.icon-menu::after {
+  bottom: 0;
+}
+
+.icon-menu__line {
+  top: calc(50% - 0.0625rem);
+}
+
+.menu-open .icon-menu::before {
+  top: calc(50% - 0.0625rem);
+  transform: rotate(-45deg);
+}
+
+.menu-open .icon-menu::after {
+  bottom: calc(50% - 0.0625rem);
+  transform: rotate(45deg);
+}
+
+.menu-open .icon-menu__line {
+  left: 50%;
+  width: 0;
 }/*# sourceMappingURL=style.css.map */
