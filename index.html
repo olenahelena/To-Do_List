@@ -23,16 +23,25 @@
                 <div class="main-page__content">
                     <h1>To-do List</h1>
                     <nav class="header__menu menu">
-                        <div class="menu__body">
-                            <ul class="menu__list">
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">All</a>
+                        <div class="menu__body works__items items-works">
+                            <ul class="menu__list items-works__navigatoion">
+                                <!-- <li class="menu__item">
+                                    <a href="#" class="menu__link" id="all" value="all">All</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="#" class="menu__link">Completed</a>
+                                    <a href="#" class="menu__link" id="completed" value="completed">Completed</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="#" class="menu__link">Uncompleted</a>
+                                    <a href="#" class="menu__link" id="uncompleted" value="uncompleted">Uncompleted</a>
+                                </li> -->
+                                <li class="menu__item">
+                                    <button data-work-type="" class="menu__link active">All</button>
+                                </li>
+                                <li class="menu__item">
+                                    <button data-work-type="completed" class="menu__link">Completed</button>
+                                </li>
+                                <li class="menu__item">
+                                    <button data-work-type="uncompleted" class="menu__link">Uncompleted</button>
                                 </li>
                             </ul>
                         </div>
@@ -40,14 +49,6 @@
                             <span class="icon-menu__line"></span>
                         </button>
                     </nav>
-                    <!-- <i class="fa-solid fa-bars fa-lg icon-menu"></i> -->
-                    <!-- <div class="select">
-                        <select name="todos" class="filter-todo">
-                            <option value="all">All</option>
-                            <option value="completed">Completed</option>
-                            <option value="uncompleted">Uncompleted</option>
-                        </select>
-                    </div> -->
                 </div>
 
                 <form class="main-page__form" action="">
@@ -58,21 +59,14 @@
                 </form>
 
                 <div class="main-page__list">
-                    <div class="list__content">
-                        <div class="list__text">
-                            <h2>Seems you didn't add nothing yet</h2>
-                        </div>
-                        <div class="main-page__image">
-                            <img src="/assets/images/main_img.png" alt="Main Image" class="main_img">
-                        </div>
-                    </div>
+                    <div class="list__content"></div>
                     <div class="list__items"></div>
+                    <div class="todo-container">
+                        <ul class="todo-list">
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="todo-container">
-                    <ul class="todo-list">
-                    </ul>
-                </div>
             </div>
 
         </main>

@@ -159,6 +159,7 @@ form input:focus-visible {
   cursor: pointer;
   width: 5rem;
   transition: all 0.3s ease;
+  margin-left: 1rem;
 }
 
 form button:hover {
@@ -167,38 +168,10 @@ form button:hover {
 }
 
 /*-------------------------*/
-.main-page__list {
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 1.25rem;
-  min-height: 50vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 1.25rem 0.625rem;
-}
-
 .list__content {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-h2 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  line-height: normal;
-  color: hsl(0, 0%, 0%);
-  margin-top: 3.125rem;
-  text-align: center;
-}
-
-.main-page__image {
-  margin-top: 3.75rem;
-}
-
-.main_img {
-  width: 14.0625rem;
-  height: 10.5rem;
 }
 
 /*-------------------------*/
@@ -220,7 +193,7 @@ h2 {
 
 .todo-list__container {
   margin: 0.5rem;
-  background: #fff;
+  background: hsl(0, 0%, 100%);
   color: hsl(0, 0%, 0%);
   font-size: 1rem;
   border-radius: 1rem;
@@ -229,6 +202,7 @@ h2 {
   align-items: center;
   transition: all 0.5s ease;
   padding: 0;
+  width: 100%;
 }
 
 .todo-list li {
