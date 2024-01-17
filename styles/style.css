@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Hind:wght@500&family=Montserrat:wght@600;700&display=swap");
 /* reset */
 *,
@@ -72,6 +73,7 @@ body {
   font-style: normal;
   background-color: hsl(227, 100%, 95%);
   color: hsl(0, 0%, 0%);
+  min-height: 100vh;
 }
 
 .wrapper {
@@ -85,13 +87,6 @@ body {
   flex: 1 1 auto;
 }
 
-[class*=__container] {
-  max-width: 360px;
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
-  margin: 0 auto;
-}
-
 /* ------------------------ */
 .main-page {
   display: flex;
@@ -102,10 +97,6 @@ body {
 
 /* ------------------------ */
 .main-page__content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.25rem;
   background-color: hsl(250, 100%, 70%);
   border-radius: 1.25rem;
   margin: 3rem 0 1.25rem;
@@ -121,23 +112,19 @@ h1 {
   text-align: center;
 }
 
-.fa-bars {
-  color: hsl(0, 0%, 100%);
-  cursor: pointer;
-}
-
 /* ------------------------ */
 .main-page__form {
-  background-color: hsl(0, 0%, 100%);
   border-radius: 1rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
   margin-bottom: 1.125rem;
+  min-height: 20vh;
 }
 
 form input {
-  border-radius: 1rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1rem 0 0 1rem;
 }
 
 form input,
@@ -157,9 +144,7 @@ form input:focus-visible {
   background: hsl(250, 100%, 70%);
   border-radius: 0 1rem 1rem 0;
   cursor: pointer;
-  width: 5rem;
   transition: all 0.3s ease;
-  margin-left: 1rem;
 }
 
 form button:hover {
@@ -167,14 +152,12 @@ form button:hover {
   background: hsl(250, 100%, 83%);
 }
 
-/*-------------------------*/
 .list__content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/*-------------------------*/
 .delete_item {
   visibility: visible;
 }
@@ -201,13 +184,10 @@ form button:hover {
   justify-content: space-between;
   align-items: center;
   transition: all 0.5s ease;
-  padding: 0;
-  width: 100%;
 }
 
 .todo-list li {
   flex: 1;
-  padding-right: 2rem;
 }
 
 .delete-btn,
@@ -227,7 +207,9 @@ form button:hover {
 }
 
 .todo-item {
-  padding: 0 0.5rem;
+  width: 100%;
+  min-width: 8rem;
+  padding: 0 2rem;
 }
 
 .fa-check,
@@ -253,87 +235,41 @@ select {
   border: none;
 }
 
-.menu__list {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
-  gap: 36px;
-}
-
-.menu__link {
-  font-size: 18px;
-}
-
-.menu__link:hover {
-  text-decoration: underline;
-}
-
-.menu-open body {
-  overflow: hidden;
-}
-
-.menu__body {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: hsl(250, 100%, 83%);
-  padding: 100px 15px 20px 15px;
-  transition: left 0.3s;
-  overflow: auto;
-  z-index: 1;
-}
-
-.menu-open .menu__body {
-  left: 0;
-}
-
-.icon-menu {
-  display: block;
+.select {
+  margin-left: 1rem;
   position: relative;
-  z-index: 5;
-  width: 30px;
-  height: 18px;
+  overflow: hidden;
+  border-radius: 1rem;
 }
 
-/* Burger menu */
-.icon-menu__line,
-.icon-menu::before,
-.icon-menu::after {
-  content: "";
+select {
+  color: hsl(0, 0%, 0%);
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 0 1rem 1rem 0;
+}
+
+.select::after {
+  content: "▼";
   position: absolute;
-  background-color: hsl(0, 0%, 100%);
-  width: 100%;
-  height: 0.125rem;
-  left: 0;
+  background: hsl(250, 100%, 70%);
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
   transition: all 0.3s ease;
 }
 
-.icon-menu::before {
-  top: 0;
+.select:hover::after {
+  background: hsl(250, 100%, 70%);
+  color: hsl(31, 100%, 72%);
 }
 
-.icon-menu::after {
-  bottom: 0;
+.select__item {
+  font-size: 1.125rem;
 }
 
-.icon-menu__line {
-  top: calc(50% - 0.0625rem);
-}
-
-.menu-open .icon-menu::before {
-  top: calc(50% - 0.0625rem);
-  transform: rotate(-45deg);
-}
-
-.menu-open .icon-menu::after {
-  bottom: calc(50% - 0.0625rem);
-  transform: rotate(45deg);
-}
-
-.menu-open .icon-menu__line {
-  left: 50%;
-  width: 0;
+.select__item:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */

@@ -22,33 +22,6 @@
 
                 <div class="main-page__content">
                     <h1>To-do List</h1>
-                    <nav class="header__menu menu">
-                        <div class="menu__body works__items items-works">
-                            <ul class="menu__list items-works__navigatoion">
-                                <!-- <li class="menu__item">
-                                    <a href="#" class="menu__link" id="all" value="all">All</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link" id="completed" value="completed">Completed</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link" id="uncompleted" value="uncompleted">Uncompleted</a>
-                                </li> -->
-                                <li class="menu__item">
-                                    <button data-work-type="" class="menu__link active">All</button>
-                                </li>
-                                <li class="menu__item">
-                                    <button data-work-type="completed" class="menu__link">Completed</button>
-                                </li>
-                                <li class="menu__item">
-                                    <button data-work-type="uncompleted" class="menu__link">Uncompleted</button>
-                                </li>
-                            </ul>
-                        </div>
-                        <button class="menu__icon icon-menu" type="button">
-                            <span class="icon-menu__line"></span>
-                        </button>
-                    </nav>
                 </div>
 
                 <form class="main-page__form" action="">
@@ -56,6 +29,14 @@
                     <button class="todo-button" type="submit">
                         <i class="fa-solid fa-plus"></i>
                     </button>
+
+                    <div class="select">
+                        <select name="todos" class="filter-todo">
+                            <option value="all">All</option>
+                            <option value="completed">Completed</option>
+                            <option value="uncompleted">Uncompleted</option>
+                        </select>
+                    </div>
                 </form>
 
                 <div class="main-page__list">
