@@ -4,17 +4,15 @@ const todoInput = document.querySelector('.todo-input');
 const todoButton = document.querySelector('.todo-button');
 const todoList = document.querySelector('.todo-list');
 const filterOption = document.querySelector('.filter-todo');
-const noInputMessage = document.querySelector('.list__content');
 
 document.addEventListener('DOMContentLoaded', getTodos);
 todoButton.addEventListener('click', addTodo);
 document.addEventListener('click', documentActions);
+filterOption.addEventListener('click', filterTodo); 
 
 
 function addTodo(event) {
     event.preventDefault();
-// delete main image and message
-noInputMessage.style.visibility = 'hidden';
 // create div
     const todoDiv = document.createElement('div');
     todoDiv.classList.add('todo-list__container');
@@ -32,7 +30,7 @@ noInputMessage.style.visibility = 'hidden';
     const completeButton = document.createElement('button');
     completeButton.innerHTML = '<i class="fa-solid fa-check"></i>';
     completeButton.classList.add("complete-btn");
-     todoDiv.appendChild(completeButton);
+    todoDiv.appendChild(completeButton);
 
     // check mark button
     const deleteButton = document.createElement('button');
@@ -50,6 +48,7 @@ noInputMessage.style.visibility = 'hidden';
 }
 
 todoList.addEventListener('click', deleteCheck);
+
 function deleteCheck(e) {
     const item = e.target;
     // delete todo item
@@ -69,7 +68,6 @@ function deleteCheck(e) {
     }
 }
 
-filterOption.addEventListener('click', filterTodo); 
 function filterTodo(e) {
   const todos = todoList.childNodes;
   todos.forEach(function (todo) {

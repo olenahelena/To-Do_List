@@ -37,4 +37,4 @@ s
 
 ### Screenshot
 
-![](./screenshot.png)
+![](./assets/screenshot.png) 

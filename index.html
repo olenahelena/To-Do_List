@@ -17,37 +17,44 @@
 
 <body>
     <div class="wrapper">
+        <header>
+            <h1>To-do List</h1>
+        </header>
         <main class="page main-page">
             <div class="main-page__container">
 
-                <div class="main-page__content">
-                    <h1>To-do List</h1>
-                </div>
-
-                <form class="main-page__form" action="">
+                <form class="main-page__form" action="#">
                     <input type="text" class="todo-input">
                     <button class="todo-button" type="submit">
                         <i class="fa-solid fa-plus"></i>
                     </button>
 
-                    <div class="select">
+                    <!-- <div class="select">
                         <select name="todos" class="filter-todo">
                             <option value="all">All</option>
                             <option value="completed">Completed</option>
                             <option value="uncompleted">Uncompleted</option>
                         </select>
-                    </div>
+                    </div> -->
                 </form>
 
-                <div class="main-page__list">
-                    <div class="list__content"></div>
-                    <div class="list__items"></div>
-                    <div class="todo-container">
-                        <ul class="todo-list">
-                        </ul>
-                    </div>
+                <div class="select">
+                    <select name="todos" class="filter-todo">
+                        <option value="all">All</option>
+                        <option value="completed">Completed</option>
+                        <option value="uncompleted">Uncompleted</option>
+                    </select>
                 </div>
 
+
+            </div>
+            <div class="main-page__list">
+                <div class="list__content"></div>
+                <div class="list__items"></div>
+
+                <div class="todo-container">
+                    <ul class="todo-list"></ul>
+                </div>
             </div>
 
         </main>

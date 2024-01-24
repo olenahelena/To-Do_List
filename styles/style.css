@@ -96,10 +96,10 @@ body {
 }
 
 /* ------------------------ */
-.main-page__content {
+header {
   background-color: hsl(250, 100%, 70%);
   border-radius: 1.25rem;
-  margin: 3rem 0 1.25rem;
+  margin: 2rem auto;
   padding: 1rem 1rem 1.125rem;
 }
 
@@ -113,13 +113,20 @@ h1 {
 }
 
 /* ------------------------ */
+.main-page__container {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 2rem;
+}
+
 .main-page__form {
   border-radius: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.125rem;
-  min-height: 20vh;
+  min-height: 10vh;
 }
 
 form input {
@@ -227,14 +234,6 @@ form button:hover {
   opacity: 0;
 }
 
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: none;
-  border: none;
-}
-
 .select {
   margin-left: 1rem;
   position: relative;
@@ -243,10 +242,15 @@ select {
 }
 
 select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
   color: hsl(0, 0%, 0%);
-  width: 10rem;
+  width: 12rem;
   cursor: pointer;
-  padding: 1rem;
+  padding: 1.125rem;
   border-radius: 0 1rem 1rem 0;
 }
 
@@ -256,7 +260,7 @@ select {
   background: hsl(250, 100%, 70%);
   top: 0;
   right: 0;
-  padding: 1rem;
+  padding: 1.125rem;
   pointer-events: none;
   transition: all 0.3s ease;
 }
@@ -272,4 +276,30 @@ select {
 
 .select__item:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 31.25em) {
+  header {
+    margin: 2rem auto;
+    padding: 0.5rem 0.5rem 1rem;
+    width: 60%;
+  }
+  .main-page__container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .select {
+    margin: 0 0 1rem 0;
+  }
+  .main-page__form {
+    margin-bottom: 0.5rem;
+    min-height: 5vh;
+  }
+  .todo-item {
+    padding: 0 1rem;
+  }
 }/*# sourceMappingURL=style.css.map */
